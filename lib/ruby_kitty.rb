@@ -6,7 +6,7 @@ module RubyKitty
   ROOT = File.expand_path('..', __dir__)
   ARTWORK = File.join(ROOT, 'purrtraits', 'default.md')
 
-  RED = "\e[91m"
+  RED = "\e[38;2;224;17;45m" # Ruby red (#E0112D)
   RESET = "\e[0m"
 
   def self.render(io: $stdout, color: io.tty?)
