@@ -10,7 +10,14 @@ Gem::Specification.new do |spec|
   spec.authors = ['RubyKitty contributors']
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 3.1'
-  spec.files = Dir['lib/**/*.rb', 'purrtraits/ruby_kitty.md', 'README.md', 'LICENSE.txt']
+
+  spec.files = Dir[
+    'lib/**/*.rb',
+    'purrtraits/*.md',
+    'README.md',
+    'LICENSE.txt'
+  ]
+
   spec.bindir = 'exe'
   spec.executables = ['ruby_kitty']
   spec.require_paths = ['lib']
