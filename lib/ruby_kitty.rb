@@ -8,8 +8,6 @@ module RubyKitty
   RESET = "\e[0m"
 
   def self.render(io: $stdout, color: io.tty?)
-    RED = "\e[31m"
-    RESET = "\e[0m"
     artwork = File.read(ARTWORK, encoding: 'UTF-8')
     artwork = artwork.gsub('♦', "#{RED}♦#{RESET}") if color
 
@@ -17,3 +15,4 @@ module RubyKitty
   end
 end
 
+require 'ruby_kitty/railtie' if defined?(Rails::Railtie)
