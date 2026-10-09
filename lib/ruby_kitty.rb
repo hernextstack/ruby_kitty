@@ -5,6 +5,7 @@ require_relative 'ruby_kitty/version'
 module RubyKitty
   ROOT = File.expand_path('..', __dir__)
   ARTWORK = File.join(ROOT, 'purrtraits', 'default.md')
+
   RED = "\e[91m"
   RESET = "\e[0m"
 
@@ -14,3 +15,5 @@ module RubyKitty
     io.puts artwork
   end
 end
+
+require 'ruby_kitty/railtie' if defined?(Rails::Railtie)
